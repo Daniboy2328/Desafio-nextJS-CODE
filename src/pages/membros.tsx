@@ -1,4 +1,5 @@
-import { HStack, Stack, Heading, Text, Box, Image, SimpleGrid, Button } from "@chakra-ui/react";
+import { HStack, Stack, Heading, Text, Box, SimpleGrid } from "@chakra-ui/react";
+import { Scrollbars } from 'react-custom-scrollbars';
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import '@fontsource/roboto-mono/700.css'
@@ -34,7 +35,7 @@ export default function Home() {
                 alignItems={'center'}
                 as="section"
                 width={'100%'}
-                height={'100vh'}
+                height={'841px'}
             >
                 <Heading
                     fontFamily={'roboto'}
@@ -45,51 +46,63 @@ export default function Home() {
                     Membros
                 </Heading>
 
-                <SimpleGrid columns={3} spacing={'20'}>
-                {membros.map((membro) =>
-                        <Box
-                            bg='#1E1E1E'
-                            borderRadius={'20px'}
-                            width='360px'
-                            height='210px'
-                            shadow={'inset 0px 0px 5px #B300FF'}>
-                            <Stack padding={'3'}>
-                                <Text
-                                    paddingY={'2'}
-                                    fontFamily={'roboto'}
-                                    fontWeight={'500'}
-                                    fontSize={'16px'}>
-                                    {membro.name}
 
-                                </Text>
-                                <Text
-                                    paddingY={'2'}
-                                    fontFamily={'roboto'}
-                                    fontWeight={'500'}
-                                    fontSize={'16px'}>
-                                    {membro.email}
+                <Box
+                    width='100vw'
+                    height={'550px'}
+                    overflowY={'scroll'}
+                >
 
-                                </Text>
-                                <Text
-                                    paddingY={'2'}
-                                    fontFamily={'roboto'}
-                                    fontWeight={'500'}
-                                    fontSize={'16px'}>
-                                    {membro.aniversario}
+                    <Stack 
+                    alignItems={'center'}>
+                        <SimpleGrid
+                            w={'1280px'}
+                            columns={3}
+                            spacing={'20'}>
+                            {membros.map((membro) =>
+                                <Box
+                                    bg='#1E1E1E'
+                                    borderRadius={'20px'}
+                                    shadow={'inset 0px 0px 5px #B300FF'}>
+                                    <Stack padding={'3'}>
+                                        <Text
+                                            paddingY={'2'}
+                                            fontFamily={'roboto'}
+                                            fontWeight={'500'}
+                                            fontSize={'16px'}>
+                                            {membro.name}
 
-                                </Text>
-                                <Text
-                                    paddingY={'2'}
-                                    fontFamily={'roboto'}
-                                    fontWeight={'500'}
-                                    fontSize={'16px'}>
-                                    {membro.cargo}
+                                        </Text>
+                                        <Text
+                                            paddingY={'2'}
+                                            fontFamily={'roboto'}
+                                            fontWeight={'500'}
+                                            fontSize={'16px'}>
+                                            {membro.email}
 
-                                </Text>
-                            </Stack>
-                        </Box>)}
+                                        </Text>
+                                        <Text
+                                            paddingY={'2'}
+                                            fontFamily={'roboto'}
+                                            fontWeight={'500'}
+                                            fontSize={'16px'}>
+                                            {membro.aniversario}
 
-                </SimpleGrid>
+                                        </Text>
+                                        <Text
+                                            paddingY={'2'}
+                                            fontFamily={'roboto'}
+                                            fontWeight={'500'}
+                                            fontSize={'16px'}>
+                                            {membro.cargo}
+
+                                        </Text>
+                                    </Stack>
+                                </Box>)}
+
+                        </SimpleGrid>
+                    </Stack>
+                </Box>
 
             </Stack>
         </HStack >

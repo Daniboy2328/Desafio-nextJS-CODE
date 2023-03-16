@@ -1,5 +1,10 @@
 import { HStack, Stack, Heading, Text, Box, Image, SimpleGrid, Button } from "@chakra-ui/react";
 import '@fontsource/roboto-mono/700.css'
+import '@fontsource/roboto/700.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/300.css'
+
 
 export default function Home() {
   return (
@@ -8,7 +13,7 @@ export default function Home() {
     >
 
       <Stack as="section"
-        height={'100vh'}
+        height={'841px'}
         width={'50%'}
         px={12}>
 
@@ -31,7 +36,8 @@ export default function Home() {
         </Box>
         <HStack width={'100%'} justifyContent={'center'}>
           <Image
-            boxSize='600px'
+            boxSize='500px'
+            objectPosition='center'
             objectFit='cover'
             src='Gaming-amico.png'
             alt='Foto Gamer'
@@ -43,7 +49,7 @@ export default function Home() {
       <Stack
         as="section"
         width={'50%'}
-        height={'100vh'}
+        height={'841px'}
       >
         <Heading
           fontFamily={'roboto'}
@@ -67,6 +73,8 @@ export default function Home() {
                 margin={'3'}
                 borderRadius={'10px'}
                 shadow='0px 0px 10px #B300FF'
+                objectFit="cover"
+                objectPosition="center"
               />
 
               <Text
@@ -83,8 +91,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>
@@ -101,6 +110,8 @@ export default function Home() {
                 margin='3'
                 borderRadius='10px'
                 shadow='0px 0px 10px #B300FF'
+                objectFit="cover"
+                objectPosition="center"
               />
 
               <Text
@@ -117,8 +128,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>
@@ -136,6 +148,7 @@ export default function Home() {
                 margin='3'
                 borderRadius='10px'
                 shadow='0px 0px 10px #B300FF'
+
               />
 
               <Text
@@ -152,8 +165,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>
@@ -171,6 +185,8 @@ export default function Home() {
                 margin='3'
                 borderRadius='10px'
                 shadow='0px 0px 10px #B300FF'
+                objectFit="cover"
+                objectPosition="center"
               />
 
               <Text
@@ -187,8 +203,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>
@@ -205,6 +222,8 @@ export default function Home() {
                 margin='3'
                 borderRadius='10px'
                 shadow='0px 0px 10px #B300FF'
+                objectFit="cover"
+                objectPosition="center"
               />
 
               <Text
@@ -221,8 +240,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>
@@ -239,6 +259,8 @@ export default function Home() {
                 margin='3'
                 borderRadius='10px'
                 shadow='0px 0px 10px #B300FF'
+                objectFit="cover"
+                objectPosition="center"
               />
 
               <Text
@@ -255,8 +277,9 @@ export default function Home() {
                 w='120px'
                 h='32px'
                 margin={'8px'}
-                fontSize='20'
-                fontWeight='400'>
+                fontFamily='roboto'
+                fontSize='16'
+                fontWeight='300'>
                 Ver Produto
               </Button>
             </Stack>

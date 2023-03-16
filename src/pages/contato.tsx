@@ -1,18 +1,20 @@
-import { Stack, Text, Box, Input} from "@chakra-ui/react";
+import { Stack, Text, Box, Input, Textarea } from "@chakra-ui/react";
 import { Header } from "../components/Head";
+import '@fontsource/roboto/300.css'
+
+
+
 export default function Home() {
     return (
 
-
-
         <Stack
-            height={'100vh'}
+            height={'841px'}
             width={'100vw'}
             alignItems={'center'}>
             <Text
                 fontFamily={'roboto'}
                 fontSize={'56px'}
-                fontWeight={'500'}
+                fontWeight={'300'}
                 padding={'10'}>
                 Contato
             </Text>
@@ -21,7 +23,7 @@ export default function Home() {
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
-                    fontSize={'24px'}>
+                    fontSize={'20px'}>
                     Nome:
                 </Text>
             </Box>
@@ -32,14 +34,17 @@ export default function Home() {
                 width={'1080px'}
                 borderRadius={'20px'}
                 bg={'#1E1E1E'}
-                border={'none'}
-                shadow={'inset 0px 0px 5px #B300FF'}
+                borderWidth={'0'}
+                boxShadow={'inset 0px 0px 5px #B300FF'}
+                _focus={{
+                    boxShadow: "inset 0px 0px 5px #B300FF"
+                }}
             />
             <Box w={'1080px'}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
-                    fontSize={'24px'}>
+                    fontSize={'20px'}>
                     Email:
                 </Text>
             </Box>
@@ -49,14 +54,17 @@ export default function Home() {
                 width={'1080px'}
                 borderRadius={'20px'}
                 bg={'#1E1E1E'}
-                border={'none'}
-                shadow={'inset 0px 0px 5px #B300FF'}
+                borderWidth={'0'}
+                boxShadow={'inset 0px 0px 5px #B300FF'}
+                _focus={{
+                    boxShadow: "inset 0px 0px 5px #B300FF"
+                }}
             />
             <Box w={'1080px'}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
-                    fontSize={'24px'}>
+                    fontSize={'20px'}>
                     Telefone:
                 </Text>
             </Box>
@@ -66,28 +74,36 @@ export default function Home() {
                 width={'1080px'}
                 borderRadius={'20px'}
                 bg={'#1E1E1E'}
-                border={'none'}
-                shadow={'inset 0px 0px 5px #B300FF'}
+                borderWidth={'0'}
+                boxShadow={'inset 0px 0px 5px #B300FF'}
+                _focus={{
+                    boxShadow: "inset 0px 0px 5px #B300FF"
+                }}
             />
             <Box w={'1080px'}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
-                    fontSize={'24px'}>
+                    fontSize={'20px'}>
                     Assunto:
                 </Text>
             </Box>
 
-            <Input
+            <Textarea
+                resize="vertical"
                 height={'260px'}
                 width={'1080px'}
                 borderRadius={'20px'}
                 bg={'#1E1E1E'}
-                border={'none'}
-                shadow={'inset 0px 0px 5px #B300FF'}
+                borderWidth={'0'}
+                boxShadow={'inset 0px 0px 5px #B300FF'}
+                _focus={{
+                    boxShadow: "inset 0px 0px 5px #B300FF"
+                }}
             />
 
         </Stack>
+
 
     )
 }

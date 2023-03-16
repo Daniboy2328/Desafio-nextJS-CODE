@@ -51,7 +51,7 @@ export function NavBar() {
                             <Textos text={"CONTATO"}></Textos>
                         </Link>
                         <Link href="/membros">
-                            <Textos text={"SOBRE NÓS"}></Textos>
+                            <Textos text={"MEMBROS"}></Textos>
                         </Link>
 
                         <Link href="/login">

@@ -6,7 +6,7 @@ export default function Home() {
         <HStack as="main"
         >
             <Stack as="section"
-                height={'100vh'}
+                height={'841px'}
                 width={'50%'}
                 justifyContent={'center'}>
 
@@ -24,7 +24,7 @@ export default function Home() {
             <Stack
                 as="section"
                 width={'50%'}
-                height={'100vh'}
+                height={'841px'}
                 justifyContent={'center'}
                 alignItems={'center'}
             >
