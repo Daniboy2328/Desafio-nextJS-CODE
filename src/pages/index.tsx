@@ -53,19 +53,22 @@ export default function Home() {
         height={['550px', '700px', '800px', '841px', '841px']}
         px={12}
       >
-        <Heading
-          fontFamily={'roboto'}
-          fontWeight={'300'}
-          fontSize={['20px', '24px', '30px', '38px', '50px']}
-          marginTop={'12'}
-          marginBottom={'12'}>
-          Descontos de Hoje!
-        </Heading>
+        <HStack
+        justifyContent={'center'}>
+          <Text
+            fontFamily={'roboto'}
+            fontWeight={'300'}
+            fontSize={['20px', '24px', '30px', '38px', '50px']}
+            marginTop={'12'}
+            marginBottom={'12'}>
+            Descontos de Hoje:
+          </Text>
+        </HStack>
 
-        <SimpleGrid 
-        columns={3} 
-        spacingY={'10'}
-        justifyItems={'center'}>
+        <SimpleGrid
+          columns={3}
+          spacingY={'10'}
+          justifyItems={'center'}>
 
 
 
