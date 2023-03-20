@@ -19,68 +19,68 @@ export default function Home() {
                 Contato
             </Text>
 
-            <Box w={'1080px'}>
+            <Box w={['540px', '654px', '756px', '864px', '1080px']}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
                     fontSize={'20px'}>
                     Nome:
                 </Text>
-            </Box>
 
-            <Input
-                margin={'5'}
-                height={'36px'}
-                width={'1080px'}
-                borderRadius={'20px'}
-                bg={'#1E1E1E'}
-                borderWidth={'0'}
-                boxShadow={'inset 0px 0px 5px #B300FF'}
-                _focus={{
-                    boxShadow: "inset 0px 0px 5px #B300FF"
-                }}
-            />
-            <Box w={'1080px'}>
+
+                <Input
+                    height={'36px'}
+                    width={'100%'}
+                    borderRadius={'20px'}
+                    bg={'#1E1E1E'}
+                    borderWidth={'0'}
+                    boxShadow={'inset 0px 0px 5px #B300FF'}
+                    _focus={{
+                        boxShadow: "inset 0px 0px 5px #B300FF"
+                    }}
+                />
+            </Box>
+            <Box w={['540px', '654px', '756px', '864px', '1080px']}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
                     fontSize={'20px'}>
                     Email:
                 </Text>
-            </Box>
 
-            <Input
-                height={'36px'}
-                width={'1080px'}
-                borderRadius={'20px'}
-                bg={'#1E1E1E'}
-                borderWidth={'0'}
-                boxShadow={'inset 0px 0px 5px #B300FF'}
-                _focus={{
-                    boxShadow: "inset 0px 0px 5px #B300FF"
-                }}
-            />
-            <Box w={'1080px'}>
+
+                <Input
+                    height={'36px'}
+                    width={'100%'}
+                    borderRadius={'20px'}
+                    bg={'#1E1E1E'}
+                    borderWidth={'0'}
+                    boxShadow={'inset 0px 0px 5px #B300FF'}
+                    _focus={{
+                        boxShadow: "inset 0px 0px 5px #B300FF"
+                    }} />
+            </Box>
+            <Box w={['540px', '654px', '756px', '864px', '1080px']}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
                     fontSize={'20px'}>
                     Telefone:
                 </Text>
-            </Box>
 
-            <Input
-                height={'36px'}
-                width={'1080px'}
-                borderRadius={'20px'}
-                bg={'#1E1E1E'}
-                borderWidth={'0'}
-                boxShadow={'inset 0px 0px 5px #B300FF'}
-                _focus={{
-                    boxShadow: "inset 0px 0px 5px #B300FF"
-                }}
-            />
-            <Box w={'1080px'}>
+
+                <Input
+                    height={'36px'}
+                    width={'100%'}
+                    borderRadius={'20px'}
+                    bg={'#1E1E1E'}
+                    borderWidth={'0'}
+                    boxShadow={'inset 0px 0px 5px #B300FF'}
+                    _focus={{
+                        boxShadow: "inset 0px 0px 5px #B300FF"
+                    }} />
+            </Box>
+            <Box w={['540px', '654px', '756px', '864px', '1080px']}>
                 <Text
                     fontFamily={'roboto'}
                     fontWeight={'300'}
@@ -89,18 +89,20 @@ export default function Home() {
                 </Text>
             </Box>
 
-            <Textarea
-                resize="vertical"
-                height={'260px'}
-                width={'1080px'}
-                borderRadius={'20px'}
-                bg={'#1E1E1E'}
-                borderWidth={'0'}
-                boxShadow={'inset 0px 0px 5px #B300FF'}
-                _focus={{
-                    boxShadow: "inset 0px 0px 5px #B300FF"
-                }}
-            />
+            <Box
+                w={['540px', '654px', '756px', '864px', '1080px']}>
+                <Textarea
+                    resize="vertical"
+                    height={'260px'}
+                    width={'100%'}
+                    borderRadius={'20px'}
+                    bg={'#1E1E1E'}
+                    borderWidth={'0'}
+                    boxShadow={'inset 0px 0px 5px #B300FF'}
+                    _focus={{
+                        boxShadow: "inset 0px 0px 5px #B300FF"
+                    }} />
+            </Box>
 
         </Stack>
 

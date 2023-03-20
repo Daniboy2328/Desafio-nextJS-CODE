@@ -1,23 +1,27 @@
 import { HStack, Stack, Box, Image, Button, Input, Text, Link } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/roboto-mono/700.css'
 
-export default function Home() {
+export default function home() {
+    const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
+
     return (
         <HStack as="main"
+        flexDirection={['column', 'column', 'column', 'row', 'row']}
         >
             <Stack as="section"
-                height={'841px'}
                 width={'50%'}
                 justifyContent={'center'}>
 
                 <HStack width={'100%'} justifyContent={'center'}>
-                    <Image
-                        boxSize='500px'
-                        objectFit='cover'
-                        src='Gaming-amico.png'
-                        alt='Foto Gamer'
-                        alignItems={'center'}
-                    />
+                {isLargerThan992 && <Image                    
+                    boxSize={['none', 'none', 'none', '500px', '500px']}
+                    objectFit='cover'
+                    src='Gaming-amico.png'
+                    alt='Foto Gamer'
+                    alignItems={'center'}
+                />}
+                    
                 </HStack>
 
             </Stack>

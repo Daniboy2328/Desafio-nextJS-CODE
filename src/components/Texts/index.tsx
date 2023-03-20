@@ -10,7 +10,7 @@ export function Textos({ text }: TextosProps) {
         <Text
             as="p"
             fontFamily={'roboto'}
-            fontSize='20px'>
+            fontSize={['10px', '12px', '14px', '16px', '20px']}>
             {text}
         </Text>
     )

@@ -2,7 +2,7 @@ import { HStack, Stack, Heading, Text, Box, SimpleGrid } from "@chakra-ui/react"
 import { Scrollbars } from 'react-custom-scrollbars';
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import '@fontsource/roboto-mono/700.css'
+import '@fontsource/roboto-mono/400.css'
 import { type } from "os";
 
 type Membro = {
@@ -48,9 +48,12 @@ export default function Home() {
 
 
                 <Box
-                    width='100vw'
-                    height={'550px'}
-                    overflowY={'scroll'}
+                    width='1300px'
+                    height={'500px'}
+                    overflow={'auto'}
+                    sx={{ "&::-webkit-scrollbar": { width: "10px"}, 
+                    "&::-webkit-scrollbar-track": { bg: "#1E1E1E", borderRadius: "5px" },
+                    "&::-webkit-scrollbar-thumb": { bg: "#560B76", borderRadius: "5px" }}}
                 >
 
                     <Stack 

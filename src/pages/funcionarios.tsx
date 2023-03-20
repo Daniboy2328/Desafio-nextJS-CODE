@@ -141,7 +141,12 @@ export default function Admin() {
                     borderRadius={'30px'}
                     bg={'#1E1E1E'}
                     shadow={'inset 0px 0px 15px #B300FF'}
-                    overflow='auto'>
+                    overflow='auto'
+                    sx={{
+                        "&::-webkit-scrollbar": { width: "10px" },
+                        "&::-webkit-scrollbar-track": { bg: "#1E1E1E", borderRadius: "5px" },
+                        "&::-webkit-scrollbar-thumb": { bg: "#560B76", borderRadius: "5px" }
+                    }}>
 
                     <TableContainer
                         padding={'3'}>
@@ -221,7 +226,7 @@ export default function Admin() {
                             <FormLabel htmlFor="nome">Nome:</FormLabel>
                             <Input
                                 _placeholder={{ color: 'white' }}
-                                fontSize={'20px'}
+                                fontSize={'16px'}
                                 fontFamily={'roboto'}
                                 borderRadius={'20px'}
                                 bg={'#1E1E1E'}
@@ -231,7 +236,7 @@ export default function Admin() {
                                     boxShadow: "inset 0px 0px 5px #B300FF"
                                 }}
                                 id="nome"
-                                placeholder={'Digite o nome...'}
+                                placeholder={'Nome'}
                                 value={formValues.name}
                                 onChange={(event) =>
                                     setFormValues({ ...formValues, name: event.target.value })
@@ -242,7 +247,7 @@ export default function Admin() {
                             <FormLabel htmlFor="email">Email:</FormLabel>
                             <Input
                                 _placeholder={{ color: 'white' }}
-                                fontSize={'20px'}
+                                fontSize={'16px'}
                                 fontFamily={'roboto'}
                                 borderRadius={'20px'}
                                 bg={'#1E1E1E'}
@@ -252,7 +257,7 @@ export default function Admin() {
                                     boxShadow: "inset 0px 0px 5px #B300FF"
                                 }}
                                 id="email"
-                                placeholder={'Digite o email...'}
+                                placeholder={'Email'}
                                 value={formValues.email}
                                 onChange={(event) =>
                                     setFormValues({ ...formValues, email: event.target.value })
@@ -262,7 +267,7 @@ export default function Admin() {
                             <FormLabel color={'#FFFFFF'} htmlFor="aniversario">Aniversario:</FormLabel>
                             <Input
                                 _placeholder={{ color: 'white' }}
-                                fontSize={'20px'}
+                                fontSize={'16px'}
                                 fontFamily={'roboto'}
                                 borderRadius={'20px'}
                                 bg={'#1E1E1E'}
@@ -272,7 +277,7 @@ export default function Admin() {
                                     boxShadow: "inset 0px 0px 5px #B300FF"
                                 }}
                                 id="aniversario"
-                                placeholder={'Digite o aniversário...'}
+                                placeholder={'Aniversário'}
                                 value={formValues.aniversario}
                                 onChange={(event) =>
                                     setFormValues({ ...formValues, aniversario: event.target.value })
@@ -284,7 +289,7 @@ export default function Admin() {
                             <FormLabel htmlFor="cargo">Cargo:</FormLabel>
                             <Input
                                 _placeholder={{ color: 'white' }}
-                                fontSize={'20px'}
+                                fontSize={'16px'}
                                 fontFamily={'roboto'}
                                 borderRadius={'20px'}
                                 bg={'#1E1E1E'}
@@ -294,7 +299,7 @@ export default function Admin() {
                                     boxShadow: "inset 0px 0px 5px #B300FF"
                                 }}
                                 id="cargo"
-                                placeholder={'Digite o cargo...'}
+                                placeholder={'Cargo'}
                                 value={formValues.cargo}
                                 onChange={(event) =>
                                     setFormValues({ ...formValues, cargo: event.target.value })
@@ -304,7 +309,7 @@ export default function Admin() {
                         <FormControl>
                             <FormLabel htmlFor="salario">Salario:</FormLabel>
                             <Input _placeholder={{ color: 'white' }}
-                                fontSize={'20px'}
+                                fontSize={'16px'}
                                 fontFamily={'roboto'}
                                 borderRadius={'20px'}
                                 bg={'#1E1E1E'}
@@ -315,7 +320,7 @@ export default function Admin() {
                                 }}
 
                                 id="salario"
-                                placeholder={'Digite o salário...'}
+                                placeholder={'Salário'}
                                 value={formValues.salario}
                                 onChange={(event) =>
                                     setFormValues({ ...formValues, salario: event.target.value })
@@ -341,10 +346,14 @@ export default function Admin() {
                         {membroSelecionado && (
                             <>
                                 <Stack as='div' pb={'2'}>
-                                    <Text fontSize={'18px'} fontWeight={'500'}>Nome:</Text>
+                                    <Text
+                                        fontSize={'16px'}
+                                        fontWeight={'500'}>
+                                        Nome:
+                                    </Text>
 
                                     <Input _placeholder={{ color: 'white' }}
-                                        fontSize={'20px'}
+                                        fontSize={'16px'}
                                         fontFamily={'roboto'}
                                         borderRadius={'20px'}
                                         bg={'#1E1E1E'}
@@ -357,9 +366,9 @@ export default function Admin() {
                                     />
                                 </Stack>
                                 <Stack as='div' pb={'2'}>
-                                    <Text fontSize={'18px'} fontWeight={'500'}>E-mail:</Text>
+                                    <Text fontSize={'16px'} fontWeight={'500'}>E-mail:</Text>
                                     <Input _placeholder={{ color: 'white' }}
-                                        fontSize={'20px'}
+                                        fontSize={'16px'}
                                         fontFamily={'roboto'}
                                         borderRadius={'20px'}
                                         bg={'#1E1E1E'}
@@ -371,9 +380,9 @@ export default function Admin() {
                                         value={membroSelecionado.email} />
                                 </Stack>
                                 <Stack as='div' pb={'2'}>
-                                    <Text fontSize={'18px'} fontWeight={'500'}>Aniversário:</Text>
+                                    <Text fontSize={'16px'} fontWeight={'500'}>Aniversário:</Text>
                                     <Input _placeholder={{ color: 'white' }}
-                                        fontSize={'20px'}
+                                        fontSize={'16px'}
                                         fontFamily={'roboto'}
                                         borderRadius={'20px'}
                                         bg={'#1E1E1E'}
@@ -385,9 +394,9 @@ export default function Admin() {
                                         value={membroSelecionado.aniversario} />
                                 </Stack>
                                 <Stack as='div' pb={'2'}>
-                                    <Text fontSize={'18px'} fontWeight={'500'}>Cargo:</Text>
+                                    <Text fontSize={'16px'} fontWeight={'500'}>Cargo:</Text>
                                     <Input _placeholder={{ color: 'white' }}
-                                        fontSize={'20px'}
+                                        fontSize={'16px'}
                                         fontFamily={'roboto'}
                                         borderRadius={'20px'}
                                         bg={'#1E1E1E'}
@@ -399,9 +408,9 @@ export default function Admin() {
                                         value={membroSelecionado.cargo} />
                                 </Stack>
                                 <Stack as='div' pb={'2'}>
-                                    <Text fontSize={'18px'} fontWeight={'500'}>Salário:</Text>
+                                    <Text fontSize={'16px'} fontWeight={'500'}>Salário:</Text>
                                     <Input _placeholder={{ color: 'white' }}
-                                        fontSize={'20px'}
+                                        fontSize={'16px'}
                                         fontFamily={'roboto'}
                                         borderRadius={'20px'}
                                         bg={'#1E1E1E'}
@@ -427,14 +436,14 @@ export default function Admin() {
                 <ModalOverlay />
                 <ModalContent bgGradient="linear(120deg, #1E1E1E 22%, #560B76 100%)" color="white">
                     <ModalHeader>Editar Dados</ModalHeader>
-                    <ModalCloseButton/>
+                    <ModalCloseButton />
                     <ModalBody>
 
                         <FormControl>
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     borderWidth={'0'}
@@ -456,7 +465,7 @@ export default function Admin() {
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     bg={'#1E1E1E'}
@@ -478,7 +487,7 @@ export default function Admin() {
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     bg={'#1E1E1E'}
@@ -499,7 +508,7 @@ export default function Admin() {
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     bg={'#1E1E1E'}
@@ -522,7 +531,7 @@ export default function Admin() {
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     bg={'#1E1E1E'}
@@ -544,7 +553,7 @@ export default function Admin() {
                             {membroSelecionado && (
                                 <Input
                                     _placeholder={{ color: 'white' }}
-                                    fontSize={'20px'}
+                                    fontSize={'16px'}
                                     fontFamily={'roboto'}
                                     borderRadius={'20px'}
                                     bg={'#1E1E1E'}
@@ -568,7 +577,7 @@ export default function Admin() {
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-            
+
         </>
 
     )

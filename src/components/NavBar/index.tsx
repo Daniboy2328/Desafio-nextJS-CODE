@@ -9,20 +9,20 @@ export function NavBar() {
         <Box
             bg='#560B76'
             w='100%'
-            height={'120px'}
+            height='120px'
             color='white'
             px={'0'}
             py={'0'}
         >
             <Grid
-                templateColumns='repeat(3, 1fr)' w='100%' h='100%'
+                templateColumns='repeat(3, 1fr)' w='100%' h={['60px', '72px', '90px', '96px', '120px']}
                 alignItems={'center'}
                 as="nav">
 
 
                 <GridItem>
                     <Link href={'/'}>
-                        <Img marginLeft={'5'} boxSize='75px' src='/saideira_logo.png' alt='Logo Saideira' />
+                        <Img marginLeft={'5'} boxSize={['36px', '43px', '54px', '58px', '72px']} src='/saideira_logo.png' alt='Logo Saideira' />
                     </Link>
                 </GridItem>
 
@@ -32,7 +32,7 @@ export function NavBar() {
                         <Link href={'/'}>
                             <Text
                                 fontFamily={'saira'}
-                                fontSize='72px'
+                                fontSize={['32px', '40px', '54px', '60px', '72px']}
                                 as="p"
                             >
                                 SAIDEIRA
