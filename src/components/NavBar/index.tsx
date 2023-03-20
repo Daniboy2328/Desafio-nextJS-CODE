@@ -1,9 +1,10 @@
-import { HStack, Stack, Text, Box, Center, Grid, GridItem, Img, Link } from "@chakra-ui/react";
+import { HStack, Stack, Text, Box, Center, Grid, GridItem, Img, Link, useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/roboto/400.css';
 import '@fontsource/saira/300.css';
 import { Textos } from "../Texts";
 
 export function NavBar() {
+    const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
     return (
 
         <Box
@@ -15,15 +16,16 @@ export function NavBar() {
             py={'0'}
         >
             <Grid
-                templateColumns='repeat(3, 1fr)' w='100%' h={['60px', '72px', '90px', '96px', '120px']}
+                templateColumns='repeat(3, 1fr)' w='100%' h='120px'
                 alignItems={'center'}
                 as="nav">
 
 
                 <GridItem>
-                    <Link href={'/'}>
+                    {isLargerThan992 && <Link href={'/'}>
                         <Img marginLeft={'5'} boxSize={['36px', '43px', '54px', '58px', '72px']} src='/saideira_logo.png' alt='Logo Saideira' />
-                    </Link>
+                    </Link>}
+
                 </GridItem>
 
 
@@ -32,7 +34,7 @@ export function NavBar() {
                         <Link href={'/'}>
                             <Text
                                 fontFamily={'saira'}
-                                fontSize={['32px', '40px', '54px', '60px', '72px']}
+                                fontSize= '72px'
                                 as="p"
                             >
                                 SAIDEIRA
@@ -43,7 +45,7 @@ export function NavBar() {
 
 
                 <GridItem>
-                    <HStack
+                {isLargerThan992 && <HStack
                         spacing={'3.3vh'}
                         justifyContent={'flex-end'}
                         margin={'12'}>
@@ -59,7 +61,8 @@ export function NavBar() {
                                 text={"LOGIN"}></Textos>
                         </Link>
 
-                    </HStack>
+                    </HStack>}
+                    
                 </GridItem>
 
 

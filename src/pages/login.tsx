@@ -1,5 +1,4 @@
-import { HStack, Stack, Box, Image, Button, Input, Text, Link } from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/react";
+import { HStack, Stack, Box, Image, Button, Input, Text, Link, useMediaQuery} from "@chakra-ui/react";
 import '@fontsource/roboto-mono/700.css'
 
 export default function home() {
